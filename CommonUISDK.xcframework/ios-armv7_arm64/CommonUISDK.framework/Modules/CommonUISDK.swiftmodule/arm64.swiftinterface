@@ -97,17 +97,21 @@ public struct AttachmentViewModel : Swift.Equatable {
   public init(name: Swift.String? = nil, size: Swift.Int, url: Foundation.URL)
   public static func == (a: CommonUISDK.AttachmentViewModel, b: CommonUISDK.AttachmentViewModel) -> Swift.Bool
 }
-public struct ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
-  public let id: Swift.String
-  public let timestamp: Foundation.Date
-  public let messageStatus: CommonUISDK.Status
-  public let name: Swift.String?
-  public let isBot: Swift.Bool
-  public let url: Foundation.URL
-  public let filename: Swift.String
-  public let image: UIKit.UIImage?
-  public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL)
-  public static func == (a: CommonUISDK.ImageCellViewModel, b: CommonUISDK.ImageCellViewModel) -> Swift.Bool
+final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
+  public static func == (lhs: CommonUISDK.ImageCellViewModel, rhs: CommonUISDK.ImageCellViewModel) -> Swift.Bool
+  final public let id: Swift.String
+  final public let timestamp: Foundation.Date
+  final public let messageStatus: CommonUISDK.Status
+  final public let name: Swift.String?
+  final public let isBot: Swift.Bool
+  final public let url: Foundation.URL
+  final public let filename: Swift.String
+  final public var image: UIKit.UIImage? {
+    get
+    }
+  final public let cachedURL: Foundation.URL?
+  public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
+  @objc deinit
 }
 public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
   public let id: Swift.String
@@ -621,7 +625,9 @@ extension UIView {
   @discardableResult
   public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> UIKit.NSLayoutConstraint
+  public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func constrain(size: CoreGraphics.CGSize, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> [UIKit.NSLayoutConstraint]
   @discardableResult
   public func constrain(attribute: UIKit.UIView.Attribute, toView view: UIKit.UIView, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
