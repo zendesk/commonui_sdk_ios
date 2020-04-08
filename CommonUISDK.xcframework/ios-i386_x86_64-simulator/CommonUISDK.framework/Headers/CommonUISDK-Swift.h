@@ -246,8 +246,6 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 
 
 
-
-
 @class UIColor;
 
 /// Used to style the SDK.
@@ -316,6 +314,14 @@ SWIFT_CLASS("_TtC11CommonUISDK19ResponseOptionsView")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@class UICollectionViewLayout;
+
+@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
@@ -323,6 +329,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (void)awakeFromNib;
 @end
+
+
 
 
 
@@ -598,8 +606,6 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 
 
 
-
-
 @class UIColor;
 
 /// Used to style the SDK.
@@ -668,6 +674,14 @@ SWIFT_CLASS("_TtC11CommonUISDK19ResponseOptionsView")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@class UICollectionViewLayout;
+
+@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDelegateFlowLayout>
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
@@ -675,6 +689,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (void)awakeFromNib;
 @end
+
+
 
 
 

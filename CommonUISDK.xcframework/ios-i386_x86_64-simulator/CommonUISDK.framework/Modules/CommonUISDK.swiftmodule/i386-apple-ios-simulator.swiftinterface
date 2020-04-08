@@ -111,7 +111,13 @@ final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
   @objc deinit
 }
+extension ImageCellViewModel {
+  final public var topMargin: CoreGraphics.CGFloat {
+    get
+  }
+}
 public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
+  public let topMargin: CoreGraphics.CGFloat
   public let id: Swift.String
   public let timestamp: Foundation.Date
   public let name: Swift.String?
@@ -123,28 +129,21 @@ public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Sw
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool = false, messageStatus: CommonUISDK.Status)
   public static func == (a: CommonUISDK.StatusViewModel, b: CommonUISDK.StatusViewModel) -> Swift.Bool
 }
-public protocol ResponseOptionsViewViewModelProtocol {
-  var responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel] { get }
-}
-public struct ResponseOptionsViewViewModel : CommonUISDK.ResponseOptionsViewViewModelProtocol, Swift.Equatable {
-  public let responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel]
-  public init(responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel])
-  public static func == (a: CommonUISDK.ResponseOptionsViewViewModel, b: CommonUISDK.ResponseOptionsViewViewModel) -> Swift.Bool
-}
 extension UIColor {
   public static func colorFromHex(_ hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
 }
 public protocol ResponseOptionsCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
-  var responseOptionsViewViewModel: CommonUISDK.ResponseOptionsViewViewModel { get }
+  var responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel] { get }
 }
 public struct ResponseOptionsCellViewModel : CommonUISDK.ResponseOptionsCellViewModelProtocol, Swift.Equatable {
-  public let responseOptionsViewViewModel: CommonUISDK.ResponseOptionsViewViewModel
+  public let topMargin: CoreGraphics.CGFloat
+  public let responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel]
   public let id: Swift.String
   public let timestamp: Foundation.Date
   public let messageStatus: CommonUISDK.Status
   public let name: Swift.String?
   public let isBot: Swift.Bool
-  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, isBot: Swift.Bool = false, responseOptionsViewViewModel: CommonUISDK.ResponseOptionsViewViewModel)
+  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, isBot: Swift.Bool = false, responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel])
   public static func == (a: CommonUISDK.ResponseOptionsCellViewModel, b: CommonUISDK.ResponseOptionsCellViewModel) -> Swift.Bool
 }
 public struct AttachmentCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
@@ -162,6 +161,11 @@ public struct AttachmentCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   }
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, attachment: CommonUISDK.AttachmentViewModel)
   public static func == (a: CommonUISDK.AttachmentCellViewModel, b: CommonUISDK.AttachmentCellViewModel) -> Swift.Bool
+}
+extension AttachmentCellViewModel {
+  public var topMargin: CoreGraphics.CGFloat {
+    get
+  }
 }
 public protocol NavigationBarShadow {
 }
@@ -224,6 +228,7 @@ public protocol InteractionCellViewModelProtocol : CommonUISDK.CellViewModelProt
   var messageStatus: CommonUISDK.Status { get }
   var name: Swift.String? { get }
   var isBot: Swift.Bool { get }
+  var topMargin: CoreGraphics.CGFloat { get }
 }
 extension InteractionCellViewModelProtocol {
   public var isAgent: Swift.Bool {
@@ -241,6 +246,7 @@ public protocol ActionOptionsCellViewModelProtocol : CommonUISDK.InteractionCell
   var titleText: Swift.String { get }
 }
 public struct ActionOptionsCellViewModel : CommonUISDK.ActionOptionsCellViewModelProtocol, Swift.Equatable {
+  public let topMargin: CoreGraphics.CGFloat
   public let actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol]
   public let id: Swift.String
   public let timestamp: Foundation.Date
@@ -268,6 +274,7 @@ public enum MessagingCoordinatorAction {
   case didChangeInputText(text: Swift.String?, textView: UIKit.UITextView)
   case showArticle(articleId: Swift.Int64, articleUrl: Swift.String, deflectionId: Swift.Int64, interactionAccessToken: Swift.String, navigationController: UIKit.UINavigationController?)
   case didSelectActionOption(actionOptionViewModel: CommonUISDK.ActionOptionViewModelProtocol, navigationController: UIKit.UINavigationController?)
+  case didTapMenu(actions: ([UIKit.UIAlertAction]) -> Swift.Void)
   case didSelectTransferOption(transferOptionDescription: CommonUISDK.TransferOption)
   case didSelectResponseOptionViewModel(optionViewModel: CommonUISDK.ResponseOptionViewModelProtocol, responseCellViewModel: CommonUISDK.ResponseOptionsCellViewModelProtocol)
   case resendMessage(viewModel: CommonUISDK.InteractionCellViewModelProtocol)
@@ -286,6 +293,9 @@ public protocol MessagingCoordinatorProtocol : AnyObject {
   func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool)
   func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, animated: Swift.Bool)
   func removeExistingInteraction(with id: Swift.String, animated: Swift.Bool)
+  func showMenu(isVisible: Swift.Bool)
+  func updateBannerView(with text: Swift.String)
+  func showAlertController(_ alertController: UIKit.UIAlertController)
   func updateConnection(with viewModel: CommonUISDK.ConnectionViewModel)
   func showTyping(subscriptLabel: Swift.String?, isBot: Swift.Bool)
   func hideTyping()
@@ -306,7 +316,10 @@ final public class MessagingCoordinator : CommonUISDK.MessagingCoordinatorProtoc
   final public func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool = true)
   final public func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, animated: Swift.Bool = true)
   final public func removeExistingInteraction(with id: Swift.String, animated: Swift.Bool = true)
+  final public func showMenu(isVisible: Swift.Bool)
   final public func updateConnection(with viewModel: CommonUISDK.ConnectionViewModel)
+  final public func updateBannerView(with text: Swift.String)
+  final public func showAlertController(_ alertController: UIKit.UIAlertController)
   final public func showTyping(subscriptLabel: Swift.String?, isBot: Swift.Bool)
   final public func hideTyping()
   @objc deinit
@@ -344,6 +357,9 @@ public protocol TextCellViewModelProtocol : CommonUISDK.InteractionCellViewModel
   var text: Swift.String { get }
 }
 public struct TextCellViewModel : CommonUISDK.TextCellViewModelProtocol, Swift.Equatable {
+  public var topMargin: CoreGraphics.CGFloat {
+    get
+  }
   public var identifier: Swift.String {
     get
   }
@@ -378,6 +394,11 @@ extension ResponseOptionsView : UIKit.UICollectionViewDataSource, UIKit.UICollec
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
 }
+extension ResponseOptionsView : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
 @objc final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
@@ -390,6 +411,7 @@ public enum Connection : Swift.String {
   case reconnecting
   case connected
   case failed
+  case unreachable
   public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
@@ -464,6 +486,7 @@ public protocol ArticlesCellViewModelProtocol : CommonUISDK.InteractionCellViewM
   var interactionAccessToken: Swift.String { get }
 }
 public struct ArticlesCellViewModel : CommonUISDK.ArticlesCellViewModelProtocol, Swift.Equatable {
+  public let topMargin: CoreGraphics.CGFloat
   public let deflectionViewModels: [CommonUISDK.DeflectionArticleViewModel]
   public let deflectionId: Swift.Int64
   public let interactionAccessToken: Swift.String
@@ -527,6 +550,7 @@ extension ResponseOptionsTableViewCell {
   @objc deinit
 }
 public struct SeparatorWithTextViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
+  public let topMargin: CoreGraphics.CGFloat
   public let id: Swift.String
   public let timestamp: Foundation.Date
   public let text: Swift.String
@@ -665,6 +689,7 @@ public protocol PresentableCellViewModel : CommonUISDK.InteractionCellViewModelP
 public protocol TypingIndicatorCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
 }
 public struct TypingIndicatorCellViewModel : CommonUISDK.TypingIndicatorCellViewModelProtocol {
+  public let topMargin: CoreGraphics.CGFloat
   public let id: Swift.String
   public var timestamp: Foundation.Date {
     get
