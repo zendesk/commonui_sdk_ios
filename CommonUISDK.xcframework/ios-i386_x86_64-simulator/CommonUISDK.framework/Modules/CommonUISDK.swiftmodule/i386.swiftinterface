@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
 @_exported import CommonUISDK
@@ -11,16 +11,16 @@ import SDKConfigurations
 import Swift
 import UIKit
 public protocol ActionOptionsCellDelegate : AnyObject {
-  func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ButtonOptionViewModelProtocol)
+  func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ButtonOptionViewModelProtocol, from actionModel: CommonUISDK.ActionOptionsCellViewModel)
 }
-@objc final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
-  @objc override final public func prepareForReuse()
   @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc override final public var canBecomeFirstResponder: Swift.Bool {
     @objc get
   }
+  @objc override final public func prepareForReuse()
   @objc deinit
 }
 extension ActionOptionsTableViewCell {
@@ -106,7 +106,7 @@ final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   final public let filename: Swift.String
   final public var image: UIKit.UIImage? {
     get
-    }
+  }
   final public let cachedURL: Foundation.URL?
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
   @objc deinit
@@ -117,13 +117,15 @@ extension ImageCellViewModel {
   }
 }
 public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
-  public let topMargin: CoreGraphics.CGFloat
   public let id: Swift.String
   public let timestamp: Foundation.Date
-  public let name: Swift.String?
   public let messageStatus: CommonUISDK.Status
+  public let name: Swift.String?
   public let isBot: Swift.Bool
   public var cellPinning: CommonUISDK.CellPinning {
+    get
+  }
+  public var topMargin: CoreGraphics.CGFloat {
     get
   }
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool = false, messageStatus: CommonUISDK.Status)
@@ -247,17 +249,18 @@ public protocol ActionOptionsCellViewModelProtocol : CommonUISDK.InteractionCell
 }
 public struct ActionOptionsCellViewModel : CommonUISDK.ActionOptionsCellViewModelProtocol, Swift.Equatable {
   public let topMargin: CoreGraphics.CGFloat
-  public let actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol]
   public let id: Swift.String
   public let timestamp: Foundation.Date
   public let messageStatus: CommonUISDK.Status
   public let name: Swift.String?
   public let isBot: Swift.Bool
   public let titleText: Swift.String
-  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol])
+  public let isEnabled: Swift.Bool
+  public let actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol]
+  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, isEnabled: Swift.Bool = true, actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol])
   public static func == (lhs: CommonUISDK.ActionOptionsCellViewModel, rhs: CommonUISDK.ActionOptionsCellViewModel) -> Swift.Bool
 }
-@objc(ZDKCommonTheme) final public class CommonTheme : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ZDKCommonTheme) final public class CommonTheme : ObjectiveC.NSObject {
   @objc public static let currentTheme: CommonUISDK.CommonTheme
   @objc final public var primaryColor: UIKit.UIColor
   @objc deinit
@@ -344,7 +347,8 @@ public struct InputFieldViewModel : Swift.Equatable {
   public let enabled: Swift.Bool
   public let shouldShowAttachmentIcon: Swift.Bool
   public let endUserHint: Swift.String
-  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil)
+  public let keyboardType: UIKit.UIKeyboardType
+  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType = .default)
   public static func == (a: CommonUISDK.InputFieldViewModel, b: CommonUISDK.InputFieldViewModel) -> Swift.Bool
 }
 public enum MimeUtils {
@@ -382,10 +386,10 @@ public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
   public func updatedItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
   public func removedItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
 }
-final public class EventListener<Sender> {
+@_hasMissingDesignatedInitializers final public class EventListener<Sender> {
   @objc deinit
 }
-@objc final public class ResponseOptionsView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ResponseOptionsView : UIKit.UIView {
   @objc deinit
 }
 extension ResponseOptionsView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate {
@@ -399,7 +403,7 @@ extension ResponseOptionsView : UIKit.UICollectionViewDelegateFlowLayout {
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
 }
-@objc final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
   final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
@@ -421,16 +425,16 @@ public enum Connection : Swift.String {
 public struct ConnectionViewModel : Swift.Hashable {
   public let connection: CommonUISDK.Connection
   public init(connection: CommonUISDK.Connection)
-  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
 }
 public protocol ArticlesTableViewCellDelegate : AnyObject {
   func articlesTableViewCell(_ cell: CommonUISDK.ArticlesTableViewCell, didSelectArticleID articleID: Swift.Int64, andArticleUrl url: Swift.String, withDeflectionId deflectionId: Swift.Int64, andInteractionAccessToken accessToken: Swift.String)
 }
-@objc final public class ArticlesTableViewCell : CommonUISDK.InteractionCell {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ArticlesTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
   @objc override final public func prepareForReuse()
@@ -470,15 +474,13 @@ extension Identifier {
 public protocol TransferOptionViewModelProtocol : CommonUISDK.ButtonOptionViewModelProtocol {
   var transfer: CommonUISDK.TransferOption { get }
 }
-public struct TransferOptionViewModel : CommonUISDK.TransferOptionViewModelProtocol {
+public struct TransferOptionViewModel : CommonUISDK.TransferOptionViewModelProtocol, Swift.Equatable {
   public let description: Swift.String
   public let localizedLabelText: Swift.String
-  public let transfer: CommonUISDK.TransferOption
   public let shouldHaveBottomBorder: Swift.Bool
+  public let transfer: CommonUISDK.TransferOption
   public init(description: Swift.String, localisedLabelText: Swift.String, shouldHaveBottomBorder: Swift.Bool, transfer: CommonUISDK.TransferOption)
-}
-extension TransferOptionViewModel : Swift.Equatable {
-  public static func == (lhs: CommonUISDK.TransferOptionViewModel, rhs: CommonUISDK.TransferOptionViewModel) -> Swift.Bool
+  public static func == (a: CommonUISDK.TransferOptionViewModel, b: CommonUISDK.TransferOptionViewModel) -> Swift.Bool
 }
 public protocol ArticlesCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
   var deflectionViewModels: [CommonUISDK.DeflectionArticleViewModel] { get }
@@ -524,7 +526,7 @@ public enum InputFieldAction {
   case textViewDidChange(UIKit.UITextView)
   case didSelectAttachment
 }
-@objc final public class InputField : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class InputField : UIKit.UIView {
   weak final public var delegate: CommonUISDK.InputFieldDelegate?
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
@@ -539,14 +541,14 @@ public protocol InteractionCellDelegate : AnyObject {
 public protocol ResponseOptionsCellDelegate : CommonUISDK.InteractionCellDelegate {
   func responseOptionsCell(_ cell: CommonUISDK.ResponseOptionsTableViewCell, didSelect viewModel: CommonUISDK.ResponseOptionViewModelProtocol, forResponseViewModel responseCellViewModel: CommonUISDK.ResponseOptionsCellViewModelProtocol)
 }
-@objc final public class ResponseOptionsTableViewCell : CommonUISDK.InteractionCell {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ResponseOptionsTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc deinit
 }
 extension ResponseOptionsTableViewCell {
   final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
 }
-@objc final public class ActionOptionView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionView : UIKit.UIView {
   @objc deinit
 }
 public struct SeparatorWithTextViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
@@ -576,11 +578,11 @@ public enum Constants {
     public static let disabledPlaceholderTextColor: UIKit.UIColor
   }
   public enum Strings {
-    public static let typeAMessageLabel: Swift.String
     public static let noArticlesReply: Swift.String
     public static let singleArticleReply: Swift.String
     public static let manyArticlesReply: Swift.String
     public static let getInTouchReply: Swift.String
+    public static let typeAMessageLabel: Swift.String
   }
 }
 public protocol InteractionTableViewCell : AnyObject, CommonUISDK.Identifier {
@@ -588,7 +590,7 @@ public protocol InteractionTableViewCell : AnyObject, CommonUISDK.Identifier {
   func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
 }
 public typealias InteractionCell = UIKit.UITableViewCell & CommonUISDK.InteractionTableViewCell
-final public class EquatableCellViewModel {
+@_hasMissingDesignatedInitializers final public class EquatableCellViewModel {
   @objc deinit
 }
 extension EquatableCellViewModel : Swift.Equatable {
@@ -693,7 +695,7 @@ public struct TypingIndicatorCellViewModel : CommonUISDK.TypingIndicatorCellView
   public let id: Swift.String
   public var timestamp: Foundation.Date {
     get
-    }
+  }
   public let name: Swift.String?
   public let isBot: Swift.Bool
   public let cellPinning: CommonUISDK.CellPinning
@@ -706,6 +708,7 @@ extension CommonUISDK.CellPosition : Swift.RawRepresentable {}
 extension CommonUISDK.CellPinning : Swift.Equatable {}
 extension CommonUISDK.CellPinning : Swift.Hashable {}
 extension CommonUISDK.CellPinning : Swift.RawRepresentable {}
+extension CommonUISDK.Connection : Swift.Equatable {}
 extension CommonUISDK.Connection : Swift.Hashable {}
 extension CommonUISDK.Connection : Swift.RawRepresentable {}
 extension UIKit.UIView.Dimension : Swift.Equatable {}
