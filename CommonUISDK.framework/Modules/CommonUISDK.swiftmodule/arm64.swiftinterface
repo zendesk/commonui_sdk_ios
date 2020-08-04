@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
 import CommonCrypto
@@ -309,9 +309,9 @@ public protocol MessagingCoordinatorProtocol : AnyObject {
   func configureViewController(avatarImage: UIKit.UIImage?, inputFieldState: CommonUISDK.InputFieldViewModel) -> UIKit.UIViewController
   func set(avatarImage: UIKit.UIImage?, animated: Swift.Bool)
   func updateInputField(_ inputFieldState: CommonUISDK.InputFieldViewModel)
+  func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], keepUpdateIndex: Swift.Bool, animated: Swift.Bool)
   func appendInteractions(_ interactions: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool)
-  func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool)
-  func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, animated: Swift.Bool)
+  func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, keepIndex: Swift.Bool, animated: Swift.Bool)
   func removeExistingInteraction(with id: Swift.String, animated: Swift.Bool)
   func showMenu(isVisible: Swift.Bool)
   func updateBannerView(with text: Swift.String)
@@ -336,8 +336,8 @@ final public class MessagingCoordinator : CommonUISDK.MessagingCoordinatorProtoc
   final public func set(avatarImage: UIKit.UIImage? = nil, animated: Swift.Bool = true)
   final public func updateInputField(_ inputFieldState: CommonUISDK.InputFieldViewModel)
   final public func appendInteractions(_ interactions: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool = true)
-  final public func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], animated: Swift.Bool = true)
-  final public func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, animated: Swift.Bool = true)
+  final public func batchUpdate(added: [CommonUISDK.InteractionCellViewModelProtocol], updated: [CommonUISDK.InteractionCellViewModelProtocol], removed: [CommonUISDK.InteractionCellViewModelProtocol], keepUpdateIndex: Swift.Bool = false, animated: Swift.Bool = true)
+  final public func updateExistingInteraction(_ interaction: CommonUISDK.InteractionCellViewModelProtocol, keepIndex: Swift.Bool = false, animated: Swift.Bool = true)
   final public func removeExistingInteraction(with id: Swift.String, animated: Swift.Bool = true)
   final public func showMenu(isVisible: Swift.Bool)
   final public func updateConnection(with viewModel: CommonUISDK.ConnectionViewModel)
@@ -600,6 +600,7 @@ public enum Constants {
   public enum UI {
     public static let systemBackground: UIKit.UIColor
     public static let systemGray2: UIKit.UIColor
+    public static let systemGray3: UIKit.UIColor
     public static let systemGray5: UIKit.UIColor
     public static let primaryColor: UIKit.UIColor
   }

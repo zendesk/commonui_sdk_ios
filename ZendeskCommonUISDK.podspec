@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZendeskCommonUISDK"
-  s.version      = "5.0.0"
+  s.version      = "5.1.0"
   s.summary      = "ZendeskCommonUISDK #{s.version.to_s}"
   s.homepage     = "https://developer.zendesk.com/embeddables"
   s.license      = {
@@ -18,8 +18,9 @@ Pod::Spec.new do |s|
   s.author       = 'Zendesk'
   s.platform     = :ios, '10.0'
   s.requires_arc = true
-  s.swift_version = '5.2.2'
+  s.swift_version = '5.2.4'
   s.source       = { :git => "https://github.com/zendesk/commonui_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'CommonUISDK.framework'
-  s.dependency 'ZendeskSDKConfigurationsSDK', '~> 1.1.5'
+  s.preserve_paths = 'CommonUISDK.framework', 'CommonUISDK.framework.dSYM'
+  s.dependency 'ZendeskSDKConfigurationsSDK', '~> 1.1.6'
 end
