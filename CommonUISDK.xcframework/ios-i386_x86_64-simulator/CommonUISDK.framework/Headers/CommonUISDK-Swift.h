@@ -238,6 +238,22 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 
 
 
+@class UICollectionViewLayoutAttributes;
+
+/// A <code>UICollectionViewFlowLayout</code> subclass that gives you control
+/// over the horizontal and vertical alignment of the cells.
+/// You can use it to align the cells like words in a left- or right-aligned text
+/// and you can specify how the cells are vertically aligned in their row.
+SWIFT_CLASS("_TtC11CommonUISDK31AlignedCollectionViewFlowLayout")
+@interface AlignedCollectionViewFlowLayout : UICollectionViewFlowLayout
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 @interface ArticlesTableViewCell : UITableViewCell
@@ -296,42 +312,6 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 
 
 
-SWIFT_CLASS("_TtC11CommonUISDK28ResponseOptionsTableViewCell")
-@interface ResponseOptionsTableViewCell : UITableViewCell
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-
-
-SWIFT_CLASS("_TtC11CommonUISDK19ResponseOptionsView")
-@interface ResponseOptionsView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-@class UICollectionView;
-@class UICollectionViewCell;
-
-@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDataSource, UICollectionViewDelegate>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-@end
-
-@class UICollectionViewLayout;
-
-@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDelegateFlowLayout>
-- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -362,10 +342,18 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
 @interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
 /// Displays an image.
 - (void)nuke_displayWithImage:(UIImage * _Nullable)image;
 @end
+
+
 
 
 
@@ -633,6 +621,22 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 
 
 
+@class UICollectionViewLayoutAttributes;
+
+/// A <code>UICollectionViewFlowLayout</code> subclass that gives you control
+/// over the horizontal and vertical alignment of the cells.
+/// You can use it to align the cells like words in a left- or right-aligned text
+/// and you can specify how the cells are vertically aligned in their row.
+SWIFT_CLASS("_TtC11CommonUISDK31AlignedCollectionViewFlowLayout")
+@interface AlignedCollectionViewFlowLayout : UICollectionViewFlowLayout
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 @interface ArticlesTableViewCell : UITableViewCell
@@ -691,42 +695,6 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 
 
 
-SWIFT_CLASS("_TtC11CommonUISDK28ResponseOptionsTableViewCell")
-@interface ResponseOptionsTableViewCell : UITableViewCell
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-
-
-SWIFT_CLASS("_TtC11CommonUISDK19ResponseOptionsView")
-@interface ResponseOptionsView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-@class UICollectionView;
-@class UICollectionViewCell;
-
-@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDataSource, UICollectionViewDelegate>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-@end
-
-@class UICollectionViewLayout;
-
-@interface ResponseOptionsView (SWIFT_EXTENSION(CommonUISDK)) <UICollectionViewDelegateFlowLayout>
-- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -757,10 +725,18 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
 @interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
 /// Displays an image.
 - (void)nuke_displayWithImage:(UIImage * _Nullable)image;
 @end
+
+
 
 
 
