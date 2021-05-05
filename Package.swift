@@ -8,7 +8,9 @@ let package = Package(
     products: [
         .library(
             name: "ZendeskCommonUISDK",
-            targets: [ "ZendeskCommonUISDK" ]
+            targets: [
+                "ZendeskCommonUISDK"
+            ]
         )
     ],
     targets: [
