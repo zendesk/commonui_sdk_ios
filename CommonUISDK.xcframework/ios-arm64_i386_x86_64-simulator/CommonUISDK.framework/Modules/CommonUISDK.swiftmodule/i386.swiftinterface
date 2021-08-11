@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
 import CommonCrypto
@@ -53,11 +53,11 @@ public enum ViewControllerEvent : Swift.Equatable {
   case viewDidDisappear
   case viewDidLayoutSubviews
   case viewControllerDidClose
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CommonUISDK.ViewControllerEvent, b: CommonUISDK.ViewControllerEvent) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: CommonUISDK.ViewControllerEvent, b: CommonUISDK.ViewControllerEvent) -> Swift.Bool
 }
 public protocol MessagingViewModelProtocol {
   var avatarImage: UIKit.UIImage? { get }
@@ -208,8 +208,8 @@ public enum CellPosition : Swift.Int {
   case left
   case center
   case right
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -219,8 +219,8 @@ public enum CellPinning : Swift.Int {
   case bottom
   case bottomWithinSection
   case topWithinSection
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -432,8 +432,8 @@ public enum Connection : Swift.String {
   case connected
   case failed
   case unreachable
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -441,11 +441,11 @@ public enum Connection : Swift.String {
 public struct ConnectionViewModel : Swift.Hashable {
   public let connection: CommonUISDK.Connection
   public init(connection: CommonUISDK.Connection)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
 }
 public protocol ArticlesTableViewCellDelegate : AnyObject {
   func articlesTableViewCell(_ cell: CommonUISDK.ArticlesTableViewCell, didSelectArticleID articleID: Swift.Int64, andArticleUrl url: Swift.String, withDeflectionId deflectionId: Swift.Int64, andInteractionAccessToken accessToken: Swift.String)
@@ -607,20 +607,20 @@ public enum HorizontalAlignment {
   case trailing
   case justified
   public static func == (a: CommonUISDK.HorizontalAlignment, b: CommonUISDK.HorizontalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum VerticalAlignment {
   case top
   case center
   case bottom
   public static func == (a: CommonUISDK.VerticalAlignment, b: CommonUISDK.VerticalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 @objc open class AlignedCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
   public var horizontalAlignment: CommonUISDK.HorizontalAlignment
@@ -643,10 +643,10 @@ extension UIView {
     case height
     case width
     public static func == (a: UIKit.UIView.Dimension, b: UIKit.UIView.Dimension) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public enum Attribute : Swift.String {
     case top
@@ -657,8 +657,8 @@ extension UIView {
     case centerY
     case trailing
     case leading
-    public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
@@ -667,10 +667,10 @@ extension UIView {
     case horizontal
     case vertical
     public static func == (a: UIKit.UIView.Axis, b: UIKit.UIView.Axis) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
     get
