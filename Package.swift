@@ -9,13 +9,13 @@ let package = Package(
         .library(
             name: "ZendeskCommonUISDK",
             targets: [
-                "ZendeskCommonUISDK"
+                "CommonUISDK"
             ]
         )
     ],
     targets: [
         .binaryTarget(
-            name: "ZendeskCommonUISDK",
+            name: "CommonUISDK",
             path: "CommonUISDK.xcframework"
         )
     ]
