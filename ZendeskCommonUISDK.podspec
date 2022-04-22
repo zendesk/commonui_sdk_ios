@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "ZendeskCommonUISDK"
-  s.version      = "6.1.3"
+  s.version      = "6.1.4"
   s.summary      = "ZendeskCommonUISDK #{s.version.to_s}"
-  s.homepage     = "https://developer.zendesk.com/embeddables"
+  s.homepage     = "https://developer.zendesk.com/documentation/classic-web-widget-sdks/"
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
