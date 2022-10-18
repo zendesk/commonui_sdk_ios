@@ -14,7 +14,7 @@
 "ios.common.ui.alert.no.button.label" = "Hayır";
 "ios.common.ui.alert.yes.button.label" = "Evet";
 "ios.common.ui.attachment.error.alert.ok.button.label" = "TAMAM";
-"ios.common.ui.attachment.error.alert.title.label" = "Resim kaydedilemedi";
+"ios.common.ui.attachment.error.alert.title.label" = "Görsel kaydedilemedi";
 "ios.common.ui.attachment.selection.camera.button.label" = "Kamera";
 "ios.common.ui.attachment.selection.cancel.button.label" = "İptal";
 "ios.common.ui.attachment.selection.document.button.label" = "Belge";
