@@ -6,7 +6,7 @@
 "ios.common.ui.message.edit_menu.copy.button.label" = "Copiar";
 "ios.common.ui.message.edit_menu.delete.button.label" = "Borrar";
 "ios.common.ui.message.status.bot_indicator.label" = "BOT";
-"ios.common.ui.reconnection.disconnected.label" = "Desconectado";
+"ios.common.ui.reconnection.disconnected.label" = "Sin conexión";
 "ios.common.ui.reconnection.reconnecting.label" = "Volviendo a conectarse...";
 "ios.common.ui.retry.button.label" = "Volver a intentar";
 "ios.common.ui.title" = "Contáctenos";
