@@ -210,32 +210,6 @@
           },
           {
             "kind": "Function",
-            "name": "awakeFromNib",
-            "printedName": "awakeFromNib()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CommonUISDK@objc(cs)ActionOptionsTableViewCell(im)awakeFromNib",
-            "mangledName": "$s11CommonUISDK26ActionOptionsTableViewCellC12awakeFromNibyyF",
-            "moduleName": "CommonUISDK",
-            "overriding": true,
-            "objc_name": "awakeFromNib",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "Custom",
-              "AccessControl",
-              "Override"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "canPerformAction",
             "printedName": "canPerformAction(_:withSender:)",
             "children": [
@@ -14021,32 +13995,6 @@
           },
           {
             "kind": "Function",
-            "name": "awakeFromNib",
-            "printedName": "awakeFromNib()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CommonUISDK@objc(cs)TypingIndicatorTableViewCell(im)awakeFromNib",
-            "mangledName": "$s11CommonUISDK28TypingIndicatorTableViewCellC12awakeFromNibyyF",
-            "moduleName": "CommonUISDK",
-            "overriding": true,
-            "objc_name": "awakeFromNib",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "Custom",
-              "AccessControl",
-              "Override"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "updateWithViewModel",
             "printedName": "updateWithViewModel(_:)",
             "children": [
@@ -14949,32 +14897,6 @@
                 "accessorKind": "_modify"
               }
             ]
-          },
-          {
-            "kind": "Function",
-            "name": "awakeFromNib",
-            "printedName": "awakeFromNib()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CommonUISDK@objc(cs)ArticlesTableViewCell(im)awakeFromNib",
-            "mangledName": "$s11CommonUISDK21ArticlesTableViewCellC12awakeFromNibyyF",
-            "moduleName": "CommonUISDK",
-            "overriding": true,
-            "objc_name": "awakeFromNib",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "Custom",
-              "AccessControl",
-              "Override"
-            ],
-            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -24019,49 +23941,49 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2129,
+      "offset": 2051,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2353,
+      "offset": 2275,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2425,
+      "offset": 2347,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2566,
+      "offset": 2488,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4099,
+      "offset": 4021,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 4877,
+      "offset": 4799,
       "length": 41,
       "value": "\"actionOptionCell:\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/ActionOptionsCell\/Cell\/ActionOptionsTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 4917,
+      "offset": 4839,
       "length": 1,
       "value": "\"\""
     },
@@ -25132,21 +25054,21 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/AttachmentPicker\/AttachmentPickerCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6154,
+      "offset": 6213,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/AttachmentPicker\/AttachmentPickerCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 6536,
+      "offset": 6595,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/AttachmentPicker\/AttachmentPickerCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 7254,
+      "offset": 7313,
       "length": 4,
       "value": "true"
     },
@@ -25258,56 +25180,56 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4475,
+      "offset": 4476,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 4567,
+      "offset": 4568,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 4571,
+      "offset": 4572,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 4661,
+      "offset": 4662,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 4665,
+      "offset": 4666,
       "length": 3,
       "value": "-16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 6808,
+      "offset": 6809,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 7187,
+      "offset": 7188,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/ImageCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 7251,
+      "offset": 7252,
       "length": 5,
       "value": "false"
     },
@@ -26602,91 +26524,91 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1491,
+      "offset": 1458,
       "length": 53,
       "value": "\"ZDKplaceholderTextLabel\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1527,
+      "offset": 1494,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1532,
+      "offset": 1499,
       "length": 10,
       "value": "\"Disabled\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1543,
+      "offset": 1510,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1685,
+      "offset": 1652,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1874,
+      "offset": 1841,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 2099,
+      "offset": 2066,
       "length": 4,
       "value": "0.33"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2192,
+      "offset": 2159,
       "length": 2,
       "value": "34"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2197,
+      "offset": 2164,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2333,
+      "offset": 2342,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2364,
+      "offset": 2373,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2394,
+      "offset": 2403,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputFieldViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2425,
+      "offset": 2434,
       "length": 1,
       "value": "0"
     },
@@ -27281,21 +27203,21 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/AttachmentCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4858,
+      "offset": 4781,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/AttachmentCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5242,
+      "offset": 5165,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Attachment Cell\/AttachmentCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5306,
+      "offset": 5229,
       "length": 5,
       "value": "false"
     },
@@ -28170,28 +28092,28 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Typing Indicator Cell\/TypingIndicatorTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1296,
+      "offset": 1187,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Typing Indicator Cell\/TypingIndicatorTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1502,
+      "offset": 1393,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Typing Indicator Cell\/TypingIndicatorTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1901,
+      "offset": 1792,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Typing Indicator Cell\/TypingIndicatorTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 1970,
+      "offset": 1861,
       "length": 2,
       "value": "56"
     },
@@ -28275,21 +28197,21 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Status Cell\/StatusView.swift",
       "kind": "FloatLiteral",
-      "offset": 5040,
+      "offset": 5099,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Status Cell\/StatusView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5177,
+      "offset": 5236,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Status Cell\/StatusView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5188,
+      "offset": 5247,
       "length": 1,
       "value": "0"
     },
@@ -28338,49 +28260,49 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2722,
+      "offset": 2644,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2928,
+      "offset": 2850,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3251,
+      "offset": 3173,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3322,
+      "offset": 3244,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3468,
+      "offset": 3390,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4977,
+      "offset": 4899,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Deflection Cell\/Cell\/ArticlesTableViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 5088,
+      "offset": 5010,
       "length": 34,
       "value": "\"articlesTableViewCell:TitleLabel\""
     },
@@ -28660,140 +28582,140 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "Array",
-      "offset": 1780,
+      "offset": 2039,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2202,
+      "offset": 2461,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2410,
+      "offset": 2669,
       "length": 3,
       "value": "-35"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2642,
+      "offset": 2901,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2719,
+      "offset": 2978,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2800,
+      "offset": 3059,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2916,
+      "offset": 3175,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3206,
+      "offset": 3465,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3286,
+      "offset": 3545,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3376,
+      "offset": 3635,
       "length": 3,
       "value": "-16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "StringLiteral",
-      "offset": 3888,
+      "offset": 4147,
       "length": 35,
       "value": "\"endUserTextCell:\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "StringLiteral",
-      "offset": 3922,
+      "offset": 4181,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3962,
+      "offset": 4221,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "StringLiteral",
-      "offset": 4152,
+      "offset": 4411,
       "length": 33,
       "value": "\"endUserTextCell:MessageTextView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4556,
+      "offset": 4815,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4732,
+      "offset": 4991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4817,
+      "offset": 5076,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4846,
+      "offset": 5105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5959,
+      "offset": 6218,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/Conversation Cells\/Message Cell\/End User Cell\/EndUserTextCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 6044,
+      "offset": 6303,
       "length": 5,
       "value": "false"
     },
@@ -28961,161 +28883,161 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 4637,
+      "offset": 4636,
       "length": 4,
       "value": "-3.5"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 4681,
+      "offset": 4680,
       "length": 2,
       "value": "34"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 4693,
+      "offset": 4692,
       "length": 2,
       "value": "34"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 4816,
+      "offset": 4815,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 5288,
+      "offset": 5287,
       "length": 3,
       "value": "-16"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 5428,
+      "offset": 5427,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 5539,
+      "offset": 5538,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 5678,
+      "offset": 5677,
       "length": 3,
       "value": "5.5"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 6186,
+      "offset": 6185,
       "length": 3,
       "value": "6.5"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 6264,
+      "offset": 6263,
       "length": 2,
       "value": "-7"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 6364,
+      "offset": 6363,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "StringLiteral",
-      "offset": 6599,
+      "offset": 6598,
       "length": 20,
       "value": "\"ZDKtextContentView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "StringLiteral",
-      "offset": 6670,
+      "offset": 6669,
       "length": 15,
       "value": "\"ZDKsendButton\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "StringLiteral",
-      "offset": 6742,
+      "offset": 6741,
       "length": 21,
       "value": "\"ZDKattachmentButton\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "StringLiteral",
-      "offset": 6817,
+      "offset": 6816,
       "length": 18,
       "value": "\"ZDKtextInputView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "FloatLiteral",
-      "offset": 7844,
+      "offset": 7843,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 9651,
+      "offset": 9650,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 9655,
+      "offset": 9654,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 10148,
+      "offset": 10147,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 10152,
+      "offset": 10151,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 10238,
+      "offset": 10237,
       "length": 3,
       "value": "751"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "IntegerLiteral",
-      "offset": 11528,
+      "offset": 11527,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/CommonUISDK\/CommonUISDK\/Source\/InputField\/InputField.swift",
       "kind": "BooleanLiteral",
-      "offset": 11555,
+      "offset": 11554,
       "length": 4,
       "value": "true"
     },

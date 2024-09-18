@@ -316,7 +316,6 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
-- (void)awakeFromNib;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
@@ -347,7 +346,6 @@ SWIFT_CLASS("_TtC11CommonUISDK31AlignedCollectionViewFlowLayout")
 
 SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 @interface ArticlesTableViewCell : UITableViewCell
-- (void)awakeFromNib;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)prepareForReuse;
@@ -401,7 +399,6 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
-- (void)awakeFromNib;
 @end
 
 
@@ -765,7 +762,6 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
-- (void)awakeFromNib;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
@@ -796,7 +792,6 @@ SWIFT_CLASS("_TtC11CommonUISDK31AlignedCollectionViewFlowLayout")
 
 SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 @interface ArticlesTableViewCell : UITableViewCell
-- (void)awakeFromNib;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)prepareForReuse;
@@ -850,7 +845,6 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 @interface TypingIndicatorTableViewCell : UITableViewCell
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
-- (void)awakeFromNib;
 @end
 
 
